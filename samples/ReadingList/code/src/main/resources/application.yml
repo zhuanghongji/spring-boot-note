@@ -1,0 +1,15 @@
+error:
+  whitelabel:
+    enable: false
+
+amazon:
+  associate_id: zhuang
+
+logging:
+  level:
+    root: info
+
+server:
+  port: 8888
+
+

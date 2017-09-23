@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>登录页面</title>
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+</head>
+<body onload="document.f.username.focus();">
+
+<div id="loginForm">
+    <h3>使用用户名和密码登录</h3>
+    <div class="error" th:if="${param.error}">
+        用户名或密码错误，请重试
+    </div>
+
+    <form name="f" th:action="@{/login}" method="post">
+        <table>
+            <tr>
+                <td>用户名：</td>
+                <td><input type="text" name="username" value=""/></td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td><input type="password" name="password" value=""/></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input name="submit" type="submit" value="登录"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>
