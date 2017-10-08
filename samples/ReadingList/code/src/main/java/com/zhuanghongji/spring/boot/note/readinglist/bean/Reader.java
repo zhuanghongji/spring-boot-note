@@ -9,6 +9,9 @@ import javax.persistence.Id;
 import java.util.Arrays;
 import java.util.Collection;
 
+/**
+ * 读者
+ */
 @Entity
 public class Reader implements UserDetails{
 

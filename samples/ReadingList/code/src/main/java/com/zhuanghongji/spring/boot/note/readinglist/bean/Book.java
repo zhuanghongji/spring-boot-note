@@ -2,11 +2,13 @@ package com.zhuanghongji.spring.boot.note.readinglist.bean;
 
 import javax.persistence.*;
 
+/**
+ * 书籍
+ */
 @Entity
 public class Book {
 
-    public Book() {
-    }
+    public Book() {}
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
