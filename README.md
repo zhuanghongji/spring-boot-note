@@ -12,3 +12,8 @@ the note of learning spring-boot in chinese
 ### 阅读列表
 * [效果图](https://github.com/zhuanghongji/spring-boot-note/blob/master/note/3-reading-list-application.md)  
 * [相关代码](https://github.com/zhuanghongji/spring-boot-note/tree/master/samples/ReadingList)
+
+## 参考内容
+0. [spring.io （官网）](https://spring.io/)
+0. [Spring Boot Reference Guide](https://docs.spring.io/spring-boot/docs/1.4.1.RELEASE/reference/htmlsingle/)
+0. [《Spring Boot 实战》](https://item.jd.com/11899370.html)
