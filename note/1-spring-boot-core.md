@@ -72,3 +72,7 @@ Spring Boot 通过起步依赖把常用库聚合在一起，组成了几个为�
 * 应用程序里线程的当前状态
 * 应用程序最近处理过的HTTP请求的追踪情况
 * 各种和内存用量、垃圾回收、 Web请求以及数据源用量相关的指标
+
+# 补充
+## Spring Boot不是应用服务器
+Spring Boot可以把Web应用程序变成变为可执行的Jar文件，不用部署到传统Java应用服务器里就能在命令行里运行。这是因为Spring Boot在应用程序里内嵌了一个Servlet容器（Tomcat/Jetty/Undertow），这是内嵌的Servlet容器提供的功能，并不是Spring Boot实现的。
