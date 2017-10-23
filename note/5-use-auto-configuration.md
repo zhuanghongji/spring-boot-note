@@ -29,6 +29,41 @@ public class Book {
     private String description;
     // ignore getter and setter
 }
+
+@Entity
+public class Reader implements UserDetails{
+    private static final long serialVersionUID = 1L;
+    public Reader() {}
+    @Id
+    private String username;  // Reader 字段
+    private String fullname;  // Reader 字段
+    private String password;  // Reader 字段
+    // ignore getter and setter
+    @Override
+    public boolean isAccountNonExpired() {
+        // 账户不过期
+        return true;
+    }
+    @Override
+    public boolean isAccountNonLocked() {
+        // 不加锁
+        return true;
+    }
+    @Override
+    public boolean isCredentialsNonExpired() {
+        // 证书不过期
+        return true;
+    }
+    @Override
+    public boolean isEnabled() {
+        // 不禁用
+        return true;
+    }
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        // 授予 ROLE_READER 权限
+        return Arrays.asList(new SimpleGrantedAuthority("ROLE_READER"));
+    }
 ```
 * `@Entity` 注解表示该类是一个JPA实体。
 * `@Id` 和 `@GeneratedValue(strategy = GenerationType.AUTO)` 表示 `id` 这个字段是实体的唯一标识，并且这个字段的值是自动生成的。
