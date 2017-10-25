@@ -33,7 +33,7 @@ public class ReadingListController {
         if (readingList != null) {
             model.addAttribute("books", readingList);
             model.addAttribute("reader", reader);
-            model.addAttribute("amazonID", mAmazonProperties.getAssociatedId());
+            model.addAttribute("amazonID", mAmazonProperties.getAssociateId());
         }
         return "readingList";
     }

@@ -1,19 +1,21 @@
 package com.zhuanghongji.spring.boot.note.readinglist.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
-@Component
-@ConfigurationProperties("amazon")
+@Configuration
+@ConfigurationProperties(prefix = "amazon")
+@PropertySource("classpath:config/amazon.properties")
 public class AmazonProperties {
 
-    private String associatedId;
+    private String associateId;
 
-    public String getAssociatedId() {
-        return associatedId;
+    public String getAssociateId() {
+        return associateId;
     }
 
-    public void setAssociatedId(String associatedId) {
-        this.associatedId = associatedId;
+    public void setAssociateId(String associateId) {
+        this.associateId = associateId;
     }
 }
